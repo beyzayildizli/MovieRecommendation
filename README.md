@@ -16,12 +16,12 @@ Here's a glimpse of the project:
 4. Finally, the top-rated K movies are listed for the most similar X users from the heap
 
 ## GET RECOMMENDATION ACCORDING TO THE MOVIES:
-1. We created a vector based on the movie the user selected and the amount of ratings that user gave
-2. We computed the similarities between each pair of users in the “main_data.csv” file and user vector using cosine similarity.
-3. Then, we stored each user in the heap according to their
-similarity to the target user.
-4. We got the most similar X user from the heap and list K highest rated movies for these users. In the total, we retrieved X * K movies.
-5. Finally we listed the movie names.
+
+1. A vector was generated based on the movie selected by the user and the number of ratings provided by that user.
+2. Similarities between each pair of users in the 'main_data.csv' file and the user vector were computed using cosine similarity.
+3. Subsequently, each user was placed in a heap based on their similarity to the target user.
+4. The most similar X users were selected from the heap, and the top-rated K movies for these users were listed. In total, X * K movies were retrieved.
+5. Finally, the movie names were listed."
 
 ## WHAT DID WE LEARN WHILE DOING THE PROJECT
 - We learned when and why we have to use heaps and other data structures.
