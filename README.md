@@ -10,18 +10,18 @@ Here's a glimpse of the project:
 </div>
 
 ## GET RECOMMENDATIONS ACCORDING TO THE TARGET USER:
-1. In the first screen, the user only selects the target user from combo box
-2. After this selection, our algorithm computes the similarity between each pair of users in the “main_data.csv” file and the target user using cosine similarity.
-3. Later on, each user is stored in a heap according to their similarity to the target user.
-4. Finally, the top-rated K movies are listed for the most similar X users from the heap
+1. The user solely selects the target user from the combo box.
+2. Following this selection, our algorithm calculates the similarity between every pair of users in the 'main_data.csv' file and the target user using cosine similarity.
+3. Subsequently, each user is placed in a heap based on their similarity to the target user.
+4. Finally, the top-rated K movies are listed for the X users with the highest similarity from the heap.
 
 ## GET RECOMMENDATION ACCORDING TO THE MOVIES:
 
-1. A vector was generated based on the movie selected by the user and the number of ratings provided by that user.
-2. Similarities between each pair of users in the 'main_data.csv' file and the user vector were computed using cosine similarity.
-3. Subsequently, each user was placed in a heap based on their similarity to the target user.
-4. The most similar X users were selected from the heap, and the top-rated K movies for these users were listed. In total, X * K movies were retrieved.
-5. Finally, the movie names were listed."
+1. A vector is generated based on the movie selected by the user and the number of ratings provided by that user.
+2. Similarities between each pair of users in the 'main_data.csv' file and the user vector are computed using cosine similarity.
+3. Subsequently, each user is placed in a heap based on their similarity to the target user.
+4. The most similar X users are selected from the heap, and the top-rated K movies for these users are listed. In total, X * K movies are retrieved.
+5. Finally, the movie names are listed.
 
 ## WHAT DID WE LEARN WHILE DOING THE PROJECT
 - We learned when and why we have to use heaps and other data structures.
