@@ -50,19 +50,55 @@ It calculates the similarity between two different arrays by formulating it over
 ### 2. FileOperations.java:
 csv file operations and operations related to matrices created from these files are performed in this class.
 #### Methods in this class:
+- **fillHeapWithUserId:**
+ filled the heap with the ids from the main_data.csv file
+- **readFirstColumn:**
+skips the first line of the given csv file and collects the value in the first column for all other lines in a list.
+- **rowNumber:**
+Returns the number of row of the csv file whose path is given
+- **columnNumber:**
+Returns the number of columns of the csv file whose path is given
+- **matrixToArray:**
+ It finds the id value given in the matrix and returns the row after the id.
+- **targetUserMatrix:**
+ We keep the target_user.csv file in the 2D matrix
+- **rateMatrix:**
+We keep the main_data.csv file in the 2D matrix
+- **csvTo2DMatrix:**
+- T[][] csvTo2DMatrix(String filePath, Class<T> tClass): Keeps the csv file given the file path in the 2D matrix, skipping the first line, and returns this matrix
+- String csvTo2DMatrix(String filePath): Skips the first line of the csv file with the path given, keeps the comma separated data in the 2D matrix and returns this matrix. When separating the data by commas, if there is a part taken with quotation marks, it is the comma in the name of the movie and it does not use the commas in this part as a separator.
+- **createTypedArray:**
+Used to create a returned one-dimensional array of the requested type.
+- **createTypedArray2D:**
+It is used to create a returned 2-dimensional array of the requested type.
 
 ### 3. Operations.java:
 This class has various sorting operations.
 #### Methods in this class:
-
+- **closeUsers:**
+ Collects and returns a list of userNumber max elements from the CosMaxHeap named m sorted by the given cosine similarity.
+- **bestMovies:**
+Collects movie IDs as many as movieNum for selectedUserMatrix and returns this list.
+- **movieNamesArray:**
+It collects the names and genres of movies with given IDs in a list and returns this list.
 
 ### 4. GenericCast.java: 
 Cast operations used with generics are in this class.
 #### Methods in this class:
+- **convertGenericToInt:**
+Converts the given generic value to an integer.
+- **convertGenericToString:**
+Converts the given generic value to String.
+- **convertToType:**
+Makes the given String value generic in the desired class.
 
 ### 5. FirstPage.java:
 This is the class in which our code runs. In this class, it is possible to go to the frames that created for the two suggestion stages requested from us via two buttons
 #### Methods in this class:
+- **targetButtonActionPerformed:**
+Opens TargetUser frame.
+- **moviesButtonActionPerformed:**
+Opens the Movies frame
 
 ### 6. TargetUser.java:
 We see the movie suggestions with the id selected according to the Target User in the gui in this class.
@@ -79,6 +115,28 @@ Returns to the page named as FirstPage.
 ### 7. Movies.java:
 We see the movie suggestions made according to the 5 movies selected by the user in the gui in this class.
 #### Methods in this class:
+- **choose10Movie:**  
+It randomly selects 10 movies from movie matrix and adds them to a new array with their ids.
+- **populateComboBoxs:**  
+Adds the names of 10 randomly selected movies to the comboBoxes.
+- **findID:**  
+It traverses the 2d array named Matrix and returns the id in this line if there is the same expression as the entered movie name by converting it to int.
+- **newRateList:**  
+Creates a new score array based on movie scores given in comboBoxes.
+- **newTargetMatrix:**  
+Adds id to the beginning of the given movie rate array. Then a new matrix is returned by adding this new array below the targetMatrix
+- **recomment:**  
+It creates a new targetMatrix with the matrix with the given movie scores and creates a heap by taking advantage of the cos similarity between this matrix and the mainMatrix. It takes the desired number of max users from the resulting heap and adds the desired number of movies to a list according to these users. Finally, jList prints this list.
+- **checkSameElements:**  
+Checks whether the same elements exist in the given integer array. Returns false if the same element exists
+- **recommendButtonActionPerformed:**  
+Collects selected movie ids in comboBoxes into an array. If the same movie is selected, it gives a warning. If all 5 movies are different, it recommends movies based on the new movie matrix created with newRateList().
+- **userNumSpinnerStateChanged:**  
+When the value in userNumSpinne changes, it makes the new value of userNum variable the value in spinner.
+- **movieSpinnerStateChanged:**  
+When the value in movieSpinner changes, it changes the new value of movieNum to the value in the spinner.
+- **backButtonActionPerformed:**  
+Returns to the page named FirstPage.
 
 ### 8. MyButton.java:
 We added this button class to use a button that we customize as we want in the design.
