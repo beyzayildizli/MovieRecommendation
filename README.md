@@ -12,8 +12,8 @@ Here's a glimpse of the project:
 ## GET RECOMMENDATIONS ACCORDING TO THE TARGET USER:
 1. In the first screen, the user only selects the target user from combo box
 2. After this selection, our algorithm computes the similarity between each pair of users in the “main_data.csv” file and the target user using cosine similarity.
-3. Then, We stored stored each user in a heap according to their similarity to the target user.
-4. Finally, we get the most similar X user from the heap and list K highest rated movies for these users.
+3. Later on, each user is stored in a heap according to their similarity to the target user.
+4. Finally, the top-rated K movies are listed for the most similar X users from the heap
 
 ## GET RECOMMENDATION ACCORDING TO THE MOVIES:
 1. We created a vector based on the movie the user selected and the amount of ratings that user gave
