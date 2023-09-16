@@ -145,11 +145,8 @@ We added this button class to use a button that we customize as we want in the d
 To experience the program on your local machine, follow these steps:
 
 1. Clone this repository: `git clone https://github.com/beyzayildizli/MovieRecommendation.git`
-2. Open the project in Unity.
-3. Explore the project, playtest the program, and provide feedback!
-
-## Contribution
-Contributions to this project are highly welcome! If you have ideas, bug reports, or enhancements, feel free to open an issue or submit a pull request. Let's collaborate to make MovieRecommendation even better.
+2. Open the project.
+3. Explore the project and provide feedback!
 
 ## Credits
 This project was developed by Beyza Yıldızlı and Merve Öğ.
