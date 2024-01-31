@@ -1,4 +1,4 @@
-# MovieRecommendation
+# Movie Recommendations
 This is a program that provides recommendations according to the target user and movies and also my data structures lesson project.
 
 ## Screenshots
